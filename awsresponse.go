@@ -52,6 +52,7 @@ type Item struct {
 	BrowseNodes      struct {
 		BrowseNode []BrowseNode
 	}
+	VariationSummary VariationSummary
 }
 
 // BrowseNode represents a browse node returned by API
@@ -199,4 +200,10 @@ type ImageSet struct {
 	TinyImage      *Image
 	MediumImage    *Image
 	LargeImage     *Image
+}
+
+// VariationSummary response attribute
+type VariationSummary struct {
+	LowestPrice  Price
+	HighestPrice Price
 }
