@@ -53,6 +53,7 @@ type Item struct {
 		BrowseNode []BrowseNode
 	}
 	VariationSummary VariationSummary
+	Variations       Variations
 }
 
 // BrowseNode represents a browse node returned by API
@@ -206,4 +207,9 @@ type ImageSet struct {
 type VariationSummary struct {
 	LowestPrice  Price
 	HighestPrice Price
+}
+
+// Variations response attribute
+type Variations struct {
+	Items []Item `xml:"Item"`
 }
